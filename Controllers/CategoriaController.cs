@@ -7,14 +7,14 @@ namespace lotusApi.Controllers{
 
 
     [ApiController]
-    [Route("categorias")]
+    [Route("Categorias")]
     public class CategoriaController: Controller{
 
         [HttpPost]
         [Route("")]
 
         public async Task<ActionResult<Categoria>> Post([FromServices] DataContext context, [FromBody] Categoria body){
-            if(ModelState.IsValid){
+            if(!ModelState.IsValid){
                 return BadRequest(ModelState);
             }
 
