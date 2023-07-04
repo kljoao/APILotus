@@ -19,9 +19,10 @@ namespace lotusApi.Controllers{
             }
 
             var categoria = new Categoria(){
+                Ramal = body.Ramal,
+                Setor = body.Setor,
                 Nome = body.Nome,
                 Email = body.Email,
-                Cpf = body.Cpf,
                 Cell = body.Cell,
             };
 
